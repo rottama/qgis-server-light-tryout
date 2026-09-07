@@ -24,9 +24,9 @@ jobs:
       matrix:
         include:
           - target: release
-            tag: opengisch/qgis-server-light:latest
+            tag: ghcr.io/${{ github.repository }}:latest
           - target: dev
-            tag: opengisch/qgis-server-light-dev:latest    
+            tag: ghcr.io/${{ github.repository }}:dev-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v7
