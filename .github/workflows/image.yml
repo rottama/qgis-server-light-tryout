@@ -108,14 +108,6 @@ jobs:
 
       - name: Build PR Image
         if: github.event.action != 'closed'
-        uses: docker/build-push-action@v7
-        with:
-          context: .
-          push: false
-          load: true
-          tags: ghcr.io/${{ github.repository }}:pr-${{ github.event.pull_request.number }}
-
-      - name: Build PR Image
         continue-on-error: true
         uses: docker/build-push-action@v7
         with:
